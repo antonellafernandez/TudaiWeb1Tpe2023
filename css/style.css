@@ -1,0 +1,335 @@
+html, body {
+	max-width : 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../img/background.jpg"); /*con .. sube un nivel en el directorio*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*queda fijo el background*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+header {
+    align-items: center;
+    background-color: #101010;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: relative;
+}
+
+header img {
+    width: 30%;
+}
+
+header button {
+    background-color: rgb(245, 245, 245, 0.25);
+    border: none;
+    border-radius: 5%;
+    color: whitesmoke;
+}
+
+header nav {
+    background-color: #101010;
+    display: none;
+    padding: 0 5%;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+}
+
+header nav li {
+    list-style: none;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+header nav a {
+    color: whitesmoke;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+/* Contenido */
+
+.portada img {
+    display: none;
+}
+
+.contenido {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 3%;
+    width: 70%;
+}
+
+main h1 {
+    background-color: #101010;
+    color: whitesmoke;
+    font-size: 1.5vw;
+    letter-spacing: 1rem;
+    padding: 1% 0;
+    text-align: center;
+}
+
+main img {
+    border-radius: 3%;
+    box-shadow: 0 0 1rem #101010;
+    margin: 1.5% 0;
+    width: 100%;
+}
+
+
+/* Footer */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 95% 5%;
+    grid-template-areas:
+    "contacto logo redes"
+    "copyright copyright copyright";
+
+    align-items: center;
+    background-color: #101010;
+    color: whitesmoke;
+    font-size: 1.5vw;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.contacto {
+    grid-area: contacto;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.contacto li {
+    list-style: none;
+    margin: 1%;
+}
+
+.logo {
+    grid-area: logo;
+
+    border-radius: 100%;
+    box-shadow: 0 0 1rem #101010;
+    width: 50%;
+}
+
+.redes {
+    grid-area: redes;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.redes img {
+    background-color: whitesmoke;
+    border-radius: 100%;
+    margin-right: 1%;
+    width: 10%;
+}
+
+.copyright {
+    grid-area: copyright;
+
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Tabla */
+
+table {
+    background-color: #A1A4C6;
+    font-size: 1.25vw;
+    /*table-layout: fixed es para definir un algoritmo utilizado para diseñar las celdas, filas, columnas*/
+    margin-bottom: 5%;
+    table-layout: fixed;
+    width: 100%;
+}
+
+table, td, tr,th {
+    border: 1em solid #091622;
+    /*border-collapse: separate; es para separar los bordes entre si de la tabla*/
+    border: outset; 
+}
+
+tr {
+   text-align: center;
+   padding: 1%;
+}
+
+th {
+    background-image: linear-gradient(to bottom right, #C22B6B, #101010);
+    color: whitesmoke;
+    padding: 1%;
+}
+
+.resaltar {
+    background-color: #C22B6B;
+    color: whitesmoke;
+}
+
+/* Formulario */
+
+form {
+    background-color: whitesmoke;
+    box-shadow: 0 0 2rem #101010;
+    color: black;
+    width:fit-content;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 5%;
+    box-sizing: border-box;
+    border-radius: 2.5%;
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario h1, label, input, p, select, span {
+    margin: 3% 0;
+}
+
+.formulario h1 {
+    text-align: center;
+    color:#101010;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+}
+
+.opcion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.opcion label {
+    margin-right: 5%;
+}
+
+.acuerdo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.acuerdo input {
+    margin-right: 5%;
+    width: 5%;
+}
+
+.bloque {
+    align-items: center;
+}
+
+.bloque a {
+    text-decoration: none;
+}
+
+.ingresoCaptcha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3% 0;
+}
+
+.ingresoCaptcha label, input, button {
+    margin: 2.5% 0;
+}
+
+.envio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.envio #validacion {
+    color: #C22B6B;
+}
+
+/* MOBILE FIRST */
+@media only screen and (min-width: 600px) {
+    /* Header */
+
+    header button {
+        display: none;
+    }
+
+    header nav {
+        display: flex;
+        position: static; /* Queda dentro del header */
+        margin-top: 5px;
+        width: fit-content;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    header nav li {
+        margin-bottom: 0;
+        margin-right: 20%;
+    }
+
+    header nav a:hover {
+        filter: brightness(80%);
+        transition-duration: 0.5s;
+    }
+
+    /* Contenido */
+
+    .portada img {
+        border-radius: 1%;
+        box-shadow: 0 0 2rem #101010;
+        display: block;
+        margin-bottom: 5%;
+        width: 100%;
+    }
+
+    main img {
+        width: min-content;
+    }
+
+    main img:hover {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+
+    /* Footer */
+
+    .redes img:hover {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+}

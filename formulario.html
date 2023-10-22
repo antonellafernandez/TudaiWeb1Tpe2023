@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - CineWeb</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo_icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="index.html"><img src="img/logo_transparent.png" alt=""></a>
+        </figure>
+        
+        <button id="btn_nav">☰</button>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="horarios.html">HORARIOS</a></li>
+                <li><a href="formulario.html">REGISTRARSE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <form id="form" action="">
+            <h1>CREAR NUEVO USUARIO</h1>
+            <div>
+                <label>Nombre:</label>
+                <input type="text" name="nombre" required="true">
+            </div>
+            <div>
+                <label>Apellido:</label>
+                <input type="text" name="apellido" required="true">
+            </div>
+            <div>
+                <label>Dirección:</label>
+                <input type="text" name="direccion" required="true">
+            </div>
+            <div>
+                <label>Correo:</label>
+                <input type="email" name="correo" required="true">
+            </div>
+            <div>
+                <label>Teléfono:</label>
+                <input type="tel" name="telefono" required="true">
+            </div>
+            <div class="opcion">
+                <label>Género:</label>
+                <select name="genero">
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="no binario">No binario</option>
+                    <option value="no definido">No definido</option>
+                </select>
+            </div>
+            <div class="bloque">
+                <div class="ingresoCaptcha">
+                    <label class="italics" for="captcha">Ingrese el captcha:</label>
+                    <input type="text" id="ingresoCaptcha" name="captcha" required>
+                    <button id="generarCaptcha">Generar Captcha</button>
+                    <span class="bold" id="valorCaptcha"></span>
+                </div>
+                
+                <div class="acuerdo">
+                    <input type="checkbox" id="acuerdo" name="acuerdo" value="">
+                    <p>Estoy de acuerdo con los <a href="#">Términos y Condiciones</a> de CineWeb</p>
+                </div>
+                
+                <div class="envio">
+                    <input type="submit" id="enviar" value="Registrarse">
+                    <span id="validacion" class="italic"></span>
+                    <p>¿Ya eres miembro? <a href="#">Iniciar sesión</a></p>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <section class="contacto">
+            <p class="bold">Contacto</p>
+            <ul>
+                <p class="bold">Dirección</p>
+                <li><span class="italic">Facultad, Pabellón Central</span></li>
+                <li>Arroyo Seco.</li>
+                <li>Campus Universitario.</li>
+                <li>(B7001BBO) Tandil.</li>
+                <li>Buenos Aires, Argentina</li>
+
+                <p class="bold">Teléfono</p>
+                <li>(+54)(0249) 438-5650</li>
+                <li>Conmutador: int. 2000</li>
+            </ul>
+        </section>
+
+        <figure>
+            <img class="logo" src="img/logo_square.png" alt="">
+        </figure>
+
+        <section class="redes">
+            <nav>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/whatsapp.svg" alt=""></a>
+            </nav>
+        </section>
+
+        <p class="copyright">© Copyright <span class="bold">CineWeb</span> Argentina. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/formulario.js"></script>
+</body>
+</html>

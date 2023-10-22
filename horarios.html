@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios - CineWeb</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo_icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="index.html"><img src="img/logo_transparent.png" alt=""></a>
+        </figure>
+        
+        <button id="btn_nav">☰</button>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="horarios.html">HORARIOS</a></li>
+                <li><a href="formulario.html">REGISTRARSE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenido">
+        <section>
+            <table id="tabla_peliculas"> 
+                <thead>
+                    <tr>
+                        <th>Película</th>
+                        <th id="fecha0"></th>
+                        <th id="fecha1"></th>
+                        <th id="fecha2"></th>
+                        <th id="fecha3"></th>
+                        <th id="fecha4"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>  
+        </section>
+    
+        <section>
+            <form id="form_carga">
+                <h1>CARGA DE HORARIOS</h1>
+                <span class="italic">¡Este formulario solamente lo puede ver el administrador del sitio!</span>
+        
+                <div>
+                    <label>Película:</label>
+                    <input type="text" name="pelicula" required="true">
+                </div>
+        
+                <div>
+                    <label>Día 1 - Horario:</label>
+                    <input type="time" name="horario_1" required="true">
+                </div>
+        
+                <div>
+                    <label>Día 2 - Horario:</label>
+                    <input type="time" name="horario_2" required="true">
+                </div>
+        
+                <div>
+                    <label>Día 3 - Horario:</label>
+                    <input type="time" name="horario_3" required="true">
+                </div>
+        
+                <div>
+                    <label>Día 4 - Horario:</label>
+                    <input type="time" name="horario_4" required="true">
+                </div>
+        
+                <div>
+                    <label>Día 5 - Horario:</label>
+                    <input type="time" name="horario_5" required="true">
+                </div>
+        
+                <div>
+                    <input type="submit" id="cargar_x3" value="Cargar x3">
+        
+                    <input type="submit" id="cargar" value="Cargar">
+        
+                    <button id="btn_vaciar">Vaciar Tabla</button>
+                </div>
+            </form>    
+        </section>
+    </div>
+
+    <footer>
+        <section class="contacto">
+            <p class="bold">Contacto</p>
+            <ul>
+                <p class="bold">Dirección</p>
+                <li><span class="italic">Facultad, Pabellón Central</span></li>
+                <li>Arroyo Seco.</li>
+                <li>Campus Universitario.</li>
+                <li>(B7001BBO) Tandil.</li>
+                <li>Buenos Aires, Argentina</li>
+
+                <p class="bold">Teléfono</p>
+                <li>(+54)(0249) 438-5650</li>
+                <li>Conmutador: int. 2000</li>
+            </ul>
+        </section>
+
+        <figure>
+            <img class="logo" src="img/logo_square.png" alt="">
+        </figure>
+
+        <section class="redes">
+            <nav>
+                <a href=""><img src="img/instagram.svg" alt=""></a>
+                <a href=""><img src="img/facebook.svg" alt=""></a>
+                <a href=""><img src="img/whatsapp.svg" alt=""></a>
+            </nav>
+        </section>
+
+        <p class="copyright">© Copyright <span class="bold">CineWeb</span> Argentina. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/horarios.js"></script>
+</body>
+</html>
